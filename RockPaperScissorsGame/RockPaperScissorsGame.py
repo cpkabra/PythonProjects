@@ -18,7 +18,6 @@ def player_win(comp_param, player_param, win_param):
     print("Player wins   : " + str(win_param))
     print()
 
-
 for i in range(0, out):
     if player_wins == best:
         print("Player won!")
