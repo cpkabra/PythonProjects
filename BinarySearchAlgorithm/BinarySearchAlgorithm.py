@@ -1,4 +1,5 @@
 import random
+import sys
 def binary_search_algorithm(nums, num):
     if len(nums) == 0:
         return "Number not in the list"
@@ -25,5 +26,9 @@ for i in range(0,10):
 
 data = sorted(data)
 print(data)
-num_to_search = int(input("Please enter the number to search : "))
-print(str(num_to_search) + " : " + binary_search_algorithm(data, num_to_search))
+while True:
+    user_input = input("Please enter the number to search or type 'quit': ")
+    if user_input == "quit" or user_input == "QUIT" or user_input == "q" or user_input == "Q":
+        sys.exit()
+    else:
+        print(str(int(user_input)) + " : " + binary_search_algorithm(data, int(user_input)))
