@@ -1,4 +1,5 @@
 from random import randint
+import random
 def binary_search_algorithm(nums, num):
     if len(nums) == 0:
         return "Number not in the list"
@@ -14,12 +15,15 @@ def binary_search_algorithm(nums, num):
         right = nums[int(len(nums)/2) + 1: len(nums)]
         return binary_search_algorithm(right, num)
 
-data = []
-for i in range(0,101):
-    num = randint(0,1000)
+#------------------------MAIN PROGRAM--------------------------#
+data = list()
+for i in range(0,10):
+    num = random.randrange(0,101,2)
+    #Eliminate duplicates
     while num in data:
-        num = randint(0,1000)
+        num = random.randrange(0,101,2)
     data.append(num)
+
 data = sorted(data)
 print(data)
 num_to_search = int(input("Please enter the number to search : "))
