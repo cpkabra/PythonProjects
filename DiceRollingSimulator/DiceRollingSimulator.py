@@ -13,6 +13,7 @@ def print_five():
 def print_six():
     print(" ---------\n| 0  0  0 |\n|         |\n| 0  0  0 |\n ---------")
 
+#-----START------#
 num = randint(1,6)
 if num == 1:
     print_one()
