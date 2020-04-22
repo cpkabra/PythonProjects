@@ -1,4 +1,3 @@
-from random import randint
 import random
 def binary_search_algorithm(nums, num):
     if len(nums) == 0:
