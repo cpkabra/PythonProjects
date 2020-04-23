@@ -1,5 +1,8 @@
-from random import randint
 
+# @author Neel Patel
+# @file RockPaperScissorsGame.py
+
+from random import randint
 
 best, out = input("Best ______ out of _______?").split()
 best = int(best)

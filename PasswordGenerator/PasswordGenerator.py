@@ -1,3 +1,7 @@
+
+# @author Neel Patel
+# @file PasswordGenerator.py
+
 import random
 import string
 

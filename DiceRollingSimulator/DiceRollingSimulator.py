@@ -1,3 +1,7 @@
+
+# @author Neel Patel
+# @file DiceRollingSimulator.py
+
 from random import randint
 
 def print_one():

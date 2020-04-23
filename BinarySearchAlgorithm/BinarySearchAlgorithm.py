@@ -1,5 +1,10 @@
+
+# @author Neel Patel
+# @file BinarySearchAlgorithm.py
+
 import random
 import sys
+
 def binary_search_algorithm(nums, num):
     if len(nums) == 0:
         return "Number not in the list"

@@ -1,3 +1,7 @@
+
+# @author Neel Patel
+# @file HangmanGame.py
+
 from random import randint
 
 def initial_print(string):

@@ -1,3 +1,7 @@
+
+# @author Neel Patel
+# @file TicTacToeGame.py
+
 import sys
 board = {"tl" :" ", "tm": " ", "tr": " ",
          "ml" :" ", "mm": " ", "mr": " ",

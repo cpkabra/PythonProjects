@@ -1,3 +1,7 @@
+
+# @author Neel Patel
+# @file NumberGuessingGame.py
+
 from random import randint
 
 low = int(input("Please enter the low boundary: "))
