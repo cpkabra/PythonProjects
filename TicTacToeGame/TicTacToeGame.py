@@ -7,11 +7,14 @@ board = {"tl" :" ", "tm": " ", "tr": " ",
          "ml" :" ", "mm": " ", "mr": " ",
          "bl" :" ", "bm": " ", "br": " "}
 def print_board():
-   print(board["tl"] + "|" + board["tm"] + "|" + board["tr"])
-   print("-+-+-")
-   print(board["ml"] + "|" + board["mm"] + "|" + board["mr"])
-   print("-+-+-")
-   print(board["bl"] + "|" + board["bm"] + "|" + board["br"])
+    print()
+    print("Command board\ntl|tm|tr\n--+--+--\nml|mm|mr\n--+--+--\nbl|bm|br\n")
+    print("Actual board")
+    print(board["tl"] + "|" + board["tm"] + "|" + board["tr"])
+    print("-+-+-")
+    print(board["ml"] + "|" + board["mm"] + "|" + board["mr"])
+    print("-+-+-")
+    print(board["bl"] + "|" + board["bm"] + "|" + board["br"])
 
 def check_win(piece):
     wins = [["tl", "tm", "tr"],
@@ -38,7 +41,10 @@ def valid_input(check_va):
             return True
     return False
 
+
 switcher = input("Please pick either you want X or O or quit: ")
+while switcher != "X" and switcher != "O":
+    switcher = input("Please pick either you want X or O or quit: ")
 if switcher == "quit":
     sys.exit()
 while True:
