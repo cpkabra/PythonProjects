@@ -5,6 +5,7 @@
 import webbrowser as wb
 import sys, pyperclip
 
+
 maps_address = "https://www.google.com/maps/place/"
 if len(sys.argv) > 1:
     maps_address.join(sys.argv[1:])
