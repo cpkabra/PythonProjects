@@ -1,3 +1,7 @@
+
+#@author Neel Patel
+#@file BackendAndValidation.py
+
 from firebase import firebase
 
 #constants for dicts
@@ -11,9 +15,6 @@ AMOUNT_FOLLOWERS = "Amount Followers"
 database = firebase.FirebaseApplication("https://pythondb-c8d11.firebaseio.com/", None)
 #Table URL
 table = "/Users/"
-
-#@author Neel Patel
-#@file BackendAndValidation.py
 
 #Indent declaration
 INDENT = "   | "
