@@ -1,6 +1,5 @@
 import threading, requests, bs4, os, time, glob
 
-begin = time.time()
 def clear_dir(directory):
     folder_path = directory + "/*"
     files = glob.glob(folder_path)
@@ -33,10 +32,11 @@ def threaded_download(start, ending):
     print()
     print("Done downloading!")
 
-clear_dir("Comics")
 start_comic = int(input("Please enter starting comic( >= 1): "))
-ending_comic = int(input("please enter ending comic ( <= 2297): "))
+ending_comic = int(input("Please enter ending comic ( <= 2297): "))
 print()
+begin = time.time()
+clear_dir("Comics")
 threaded_download(start_comic,ending_comic)
 print("Downloaded " + str((ending_comic - start_comic) + 1) + " comics in : " + str(round(time.time()-begin, 2)) + " seconds.")
 
