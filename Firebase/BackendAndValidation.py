@@ -12,7 +12,8 @@ FOLLOWERS = "Followers"
 AMOUNT_FOLLOWING = "Amount Following"
 AMOUNT_FOLLOWERS = "Amount Followers"
 #Firebase to store all information about users
-database = firebase.FirebaseApplication("https://pythondb-c8d11.firebaseio.com/", None)
+firebase_url = "your_firebase_url_here"
+database = firebase.FirebaseApplication(firebase_url, None)
 #Table URL
 table = "/Users/"
 
