@@ -11,6 +11,10 @@ AMOUNT_FOLLOWERS = "Amount Followers"
 database = firebase.FirebaseApplication("https://pythondb-c8d11.firebaseio.com/", None)
 #Table URL
 table = "/Users/"
+
+#@author Neel Patel
+#@file BackendAndValidation.py
+
 #Indent declaration
 INDENT = "   | "
 
@@ -23,7 +27,12 @@ def print_all_users():
             print(user)
             for prop, value in data.items():
                 if prop[0] != "-":
-                    print(INDENT + str(prop) + " : " + str(value))
+                    if prop == FOLLOWERS or prop == FOLLOWING:
+                        print(INDENT + prop + ": ")
+                        for items in data[prop]:
+                            print("   | ---> " + items)
+                    else:
+                        print(INDENT + str(prop) + " : " + str(value))
             print()
 
 def get_hashed_user(name, email):
@@ -39,12 +48,12 @@ def _user_exists(email):
     return False
 
 def _post_dict(uid, data):
-    database.post(table + uid, NAME, data[NAME])
-    database.post(table + uid,EMAIL, data[EMAIL])
-    database.post(table + uid,FOLLOWING, data[FOLLOWING])
-    database.post(table + uid,FOLLOWERS, data[FOLLOWERS])
-    database.post(table + uid,AMOUNT_FOLLOWING, data[AMOUNT_FOLLOWING])
-    database.post(table + uid,AMOUNT_FOLLOWERS, data[AMOUNT_FOLLOWERS])
+    database.put(table + uid, NAME, data[NAME])
+    database.put(table + uid,EMAIL, data[EMAIL])
+    database.put(table + uid,FOLLOWING, data[FOLLOWING])
+    database.put(table + uid,FOLLOWERS, data[FOLLOWERS])
+    database.put(table + uid,AMOUNT_FOLLOWING, data[AMOUNT_FOLLOWING])
+    database.put(table + uid,AMOUNT_FOLLOWERS, data[AMOUNT_FOLLOWERS])
 
 def create_user(name, email):
     if _user_exists(email):

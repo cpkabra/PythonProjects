@@ -1,3 +1,7 @@
+
+#@author Neel Patel
+#@file SuperStopwatch.py
+
 import time
 print('Press ENTER to begin. Afterward, press ENTER to "click" the stopwatch. Press Ctrl-C to quit.')
 input()

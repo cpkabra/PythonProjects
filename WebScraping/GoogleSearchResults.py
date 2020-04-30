@@ -1,3 +1,7 @@
+
+#@author Neel Patel
+#@file GoogleSearchResults.py
+
 import requests, bs4, webbrowser as wb, sys
 
 python_tab_url = "https://pypi.org/"

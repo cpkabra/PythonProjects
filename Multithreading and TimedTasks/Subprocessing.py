@@ -1,3 +1,7 @@
+
+#@author Neel Patel
+#@file Subprocessing.py
+
 import subprocess, time
 
 aotm_path = "/Users/neelpatel/Desktop/Atom.app/Contents/MacOS/Atom"

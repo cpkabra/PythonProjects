@@ -1,3 +1,7 @@
+
+#@author Neel Patel
+#@file MultiThreading.py
+
 import threading, requests, bs4, os, time, glob
 
 def clear_dir(directory):
